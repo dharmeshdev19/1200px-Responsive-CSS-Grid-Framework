@@ -1,0 +1,282 @@
+/* our main container */
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding:0;
+}
+
+/* to divide columns appropriately */
+
+.row {margin-bottom:20px;}
+
+/* responsive image class */
+
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.column1, .column3, .column2, .column4, .column5, .column6, .column7, .column8, .column9, .column10, .column11, .column12{
+    display: inline;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+/* alpha and omega class to zero out the margin */
+
+.container .alpha{
+    margin-left:0;
+}
+
+.container .omega{
+    margin-right: 0;
+}
+
+/* Formula to find width for each column
+
+formula :- single-column-width - 100px (before removing margin-left and right) * column number - left and right margin
+
+left and right margin: 30px
+
+*/
+
+.column1{
+    width: 70px;
+}
+
+.column2{
+    width: 170px;
+}
+
+.column3{
+    width: 270px;
+}
+.column4{
+   width:  370px;
+}
+
+.column5{
+    width:  470px;
+}
+
+.column6{
+    width: 570px;
+}
+
+.column7{
+    width:  670px;
+}
+
+.column8{
+    width:  770px;
+}
+
+.column9{
+    width: 870px;
+}
+.column10{
+    width: 970px;
+}
+
+.column11{
+    width: 1070px;
+}
+
+.column12{
+    width: 1170px;
+}
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (min-width: 960px) and (max-width: 1211px){
+
+/* Formula to find width for each column
+
+formula :- single-column-width - 80px (before removing margin-left and right) * column number - left and right margin
+
+left and right margin: 30px
+
+*/
+
+
+
+
+    .container{
+        width: 960px;
+    }
+
+    .column1{
+        width: 50px;
+    }
+
+    .column2{
+        width: 130px;
+    }
+
+    .column3{
+        width: 210px;
+    }
+
+    .column4{
+        width:  290px;
+    }
+
+    .column5{
+        width:  370px;
+    }
+
+    .column6{
+        width: 450px;
+    }
+
+    .column7{
+        width:  530px;
+    }
+
+    .column8{
+        width:  610px;
+    }
+
+    .column9{
+        width: 690px;
+    }
+
+    .column10{
+        width: 770px;
+    }
+
+    .column11{
+        width: 850px;
+    }
+
+    .column12{
+        width: 930px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px){
+
+
+/* Formula to find width for each column
+
+    formula :- single-column-width - 64px (before removing margin-left and right) * column number - left and right margin
+
+    left and right margin: 30px
+
+*/
+
+
+    .container{
+        width: 768px;
+    }
+
+    .column1{
+        width: 34px;
+    }
+
+    .column2{
+        width: 98px;
+    }
+
+    .column3{
+        width: 162px;
+    }
+
+    .column4{
+        width:  226px;
+    }
+
+    .column5{
+        width:  290px;
+    }
+
+    .column6{
+        width: 354px;
+    }
+
+    .column7{
+        width:  418px;
+    }
+
+    .column8{
+        width:  482px;
+    }
+
+    .column9{
+        width: 546px;
+    }
+
+    .column10{
+        width: 610px;
+    }
+
+    .column11{
+        width: 674px;
+    }
+
+    .column12{
+        width: 738px;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+    /* 100 percent width for each column after removing left and right margin */
+
+    .container{
+        width: 420px;
+    }
+
+    .column1,.column2, .column3, .column4, .column5, .column6, .column7, .column8, .column9, .column10, .column11, .column12{
+        margin: 0 15px 20px;
+        width: 390px;
+    }
+}
+
+@media only screen and (min-width: 50px) and (max-width: 479px){
+
+    /* 100 percent width for each column after removing left and right margin */
+
+    .container{
+        width: 300px;
+    }
+
+    .column1,.column2, .column3, .column4, .column5, .column6, .column7, .column8, .column9, .column10, .column11, .column12{
+        margin: 0 15px 20px;
+        width: 270px;
+    }
+}
+
+
+
+.clearfix:before, .clearfix:after,
+.row:before, .row:after,
+.container:before, .container:after{
+    content:'.';
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;
+}
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+    clear:both;
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;
+}
+.row:after, .clearfix:after, .container:after{clear:both;}
+/* For IE7. Move this to separate file when you notice some problems */
+.row, .clearfix {zoom: 1;}
